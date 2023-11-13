@@ -40,7 +40,7 @@ class FromConfable : public Base<FromConfable<T>> {
 
   explicit FromConfable(std::string desc = "")
       : Base<FromConfable<T>>(std::move(desc)), schema_(Type().schema()) {
-    schema_.reset_ptr(); // type was temporary
+    schema_.reset_ptr();  // type was temporary
     this->type_ = schema_.type();
   }
 
